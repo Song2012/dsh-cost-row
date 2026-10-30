@@ -1,0 +1,50 @@
+{
+  "name": "dsh-cost-row",
+  "version": "0.1.0",
+  "description": "在 DSH 的「Token 用量」弹窗里加费用、计价时段与切换倒计时三行，按 DeepSeek 官方价目表与峰谷时段计算",
+  "license": "MIT",
+  "author": "Song2012",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek",
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "plugin",
+    "cost",
+    "billing"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Song2012/dsh-cost-row.git"
+  },
+  "homepage": "https://github.com/Song2012/dsh-cost-row#readme",
+  "bugs": {
+    "url": "https://github.com/Song2012/dsh-cost-row/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  }
+}
